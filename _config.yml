@@ -1,0 +1,19 @@
+domain: schemalib.com
+encoding: utf-8
+permalink: ./:year/:month/:title/
+
+exclude:
+  - README.md
+
+gems:
+  - jekyll-sitemap
+
+markdown: kramdown
+
+lib:
+  semantic:
+    baseurl: https://cdnjs.cloudflare.com/ajax/libs/semantic-ui
+    version: 2.2.2
+  jquery:
+    baseurl: https://code.jquery.com
+    version: 2.1.4
