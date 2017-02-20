@@ -5,11 +5,9 @@
 
 {% include meta.html %}
 {% include css/semantic.html %}
-{% include css/prism.html %}
 
 {% include js/jquery.html %}
 {% include js/semantic.html %}
-{% include js/prism.html %}
 
 </head>
 <body>
@@ -24,37 +22,78 @@
     </div>
     <!--Sidebar Menu-->
     <div class="ui vertical inverted sidebar menu">
-      <a  href="/"  class="{% if page.url == '/index.html' %}active{% endif %} item">Home</a><a href="/docs/"  class="{% if page.url contains '/docs/' %}active{% endif %} item">Docs</a><a href="/blog.html" class="{% if page.url contains '/blog.html' %}active{% endif %} item">Blog</a><a href="/community.html"  class="{% if page.url contains '/community.html' %}active{% endif %} item">Community</a>
+      <a href="/" class="{% if page.url == '/index.html' %}active{% endif %} item">Home</a><a href="/docs/"  class="{% if page.url contains '/docs/' %}active{% endif %} item">Docs</a><a href="/blog.html" class="{% if page.url contains '/blog.html' %}active{% endif %} item">Blog</a><a href="/community.html"  class="{% if page.url contains '/community.html' %}active{% endif %} item">Community</a>
     </div>
   <!--Page Contents-->
   <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui inverted vertical center aligned segment">
       <div class="ui container">
         <div class="ui large secondary inverted pointing menu">
             <div class="ui container">
-            <div class="ui item middle aligned image">
-              <img height="32" src="/images/logov2-64x.png">
+                <div class="ui item middle aligned image">
+                  <img height="32" src="/images/logov2-64x.png">
+                </div>
+                <a class="toc item"><i class="sidebar icon"></i></a><a  href="/"  class="{% if page.url == '/index.html' %}active{% endif %} item">Home</a><a href="/docs/"  class="{% if page.url contains '/docs/' %}active{% endif %} item">Docs</a><a  href="/blog.html"  class="{% if page.url contains '/blog.html' %}active{% endif %} item">Blog</a><a href="/community.html"  class="{% if page.url contains '/community.html' %}active{% endif %} item">Community</a>
             </div>
-            <a class="toc item"><i class="sidebar icon"></i></a><a  href="/"  class="{% if page.url == '/index.html' %}active{% endif %} item">Home</a><a href="/docs/"  class="{% if page.url contains '/docs/' %}active{% endif %} item">Docs</a><a  href="/blog.html"  class="{% if page.url contains '/blog.html' %}active{% endif %} item">Blog</a><a href="/community.html"  class="{% if page.url contains '/community.html' %}active{% endif %} item">Community</a>
-      </div>
-        </div>
-      </div>
-      <div class="ui text container">
-        <h1 class="ui inverted header">
-          SchemaLib
-        </h1>
-        <h2>
-          Library of contractual schema. One language to describe data, api, services and apps.
-        </h2>
-        <div class="ui huge primary button">
-          Get Started<i class="right arrow icon"></i>
         </div>
       </div>
     </div>
 
-    <!-- START content -->
-    {{ content }}
-    <!-- END content -->
+    <div class="ui vertical stripe segment">
+      <div class="ui middle aligned stackable divided grid container">
+        <div class="row">
+          <div class="twelve wide column">
+              <!-- START content -->
+              {{ content }}
+              <!-- END content -->
+          </div>
+          <div class="four wide column">
+          <div class="ui compact vertical segment">
+            <h4 class="ui header">Docs Menu</h4>
+            <div class="ui vertical following fluid accordion text menu">
+                <div class="item">
+                    <a class="title">
+                        <i class="dropdown icon"></i>
+                        <b>Guide</b>
+                    </a>
+                    <div class="content menu">
+                        <a class="item" href="#menu">Menu</a>
+                        <a class="item" href="#secondary-menu">Secondary Menu</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="title">
+                        <i class="dropdown icon"></i>
+                        <b>Schema Language</b>
+                    </a>
+                    <div class="content menu">
+                        <a class="item" href="#header">Header</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="title">
+                        <i class="dropdown icon"></i>
+                        <b>CLI</b>
+                    </a>
+                    <div class="content menu">
+                        <a class="item" href="#header">Header</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="title">
+                        <i class="dropdown icon"></i>
+                        <b>Library</b>
+                    </a>
+                    <div class="content menu">
+                        <a class="item" href="#header">Header</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
 
     <div class="ui inverted vertical footer segment">
       <div class="ui container">
@@ -85,6 +124,14 @@
             </div>
           </div>
         </div>
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="sixteen wide column">
+            <h5 class="ui center aligned grey header">
+                Copyright © 2017 Faruk Brbovic.
+            </h5>
+        </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -194,6 +241,15 @@
         $('.ui.sidebar')
           .sidebar('attach events', '.toc.item')
         ;
+      })
+    ;
+  </script>
+  <script>
+    $(document)
+      .ready(function() {
+          $('.ui.accordion')
+            .accordion()
+          ;
       })
     ;
   </script>

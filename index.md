@@ -1,6 +1,7 @@
 ---
 layout: main
 title: Home
+permalink: index.html
 ---
 <div class="ui vertical stripe segment">
   <div class="ui middle aligned stackable grid container">

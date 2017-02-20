@@ -11,29 +11,30 @@
 
 </head>
 <body>
-  <div class="ui large top fixed hidden menu">
-    <div class="ui container">
-          <div class="ui item middle aligned image">
-            <img height="32" src="/images/logov2-64x.png">
-          </div>
-  <a class="active item">Home</a><a class="item">Docs</a><a class="item">Blog</a><a class="item">Community</a>
-    </div>
-  </div>
-  <!--Sidebar Menu-->
-  <div class="ui vertical inverted sidebar menu">
-    <a class="active item">Home</a><a class="item">Docs</a><a class="item">Blog</a><a class="item">Community</a>
-  </div>
-  <!--Page Contents-->
-  <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui large top fixed hidden menu">
       <div class="ui container">
-        <div class="ui large secondary inverted pointing menu">
-            <div class="ui container">
             <div class="ui item middle aligned image">
               <img height="32" src="/images/logov2-64x.png">
             </div>
-          <a class="toc item"><i class="sidebar icon"></i></a><a class="active item">Home</a><a class="item">Docs</a><a class="item">Blog</a><a class="item">Community</a>
+
+    <a  href="/"  class="{% if page.url == '/index.html' %}active{% endif %} item" href="/index.html">Home</a><a href="/docs/" class="{% if page.url contains '/docs/' %}active{% endif %} item">Docs</a><a href="/blog.html" class="{% if page.url contains '/blog.html' %}active{% endif %} item">Blog</a><a  href="/community.html"  class="{% if page.url contains '/community.html' %}active{% endif %} item">Community</a>
       </div>
+    </div>
+    <!--Sidebar Menu-->
+    <div class="ui vertical inverted sidebar menu">
+      <a href="/" class="{% if page.url == '/index.html' %}active{% endif %} item">Home</a><a href="/docs/"  class="{% if page.url contains '/docs/' %}active{% endif %} item">Docs</a><a href="/blog.html" class="{% if page.url contains '/blog.html' %}active{% endif %} item">Blog</a><a href="/community.html"  class="{% if page.url contains '/community.html' %}active{% endif %} item">Community</a>
+    </div>
+  <!--Page Contents-->
+  <div class="pusher">
+    <div class="ui inverted vertical center aligned segment">
+      <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+            <div class="ui container">
+                <div class="ui item middle aligned image">
+                  <img height="32" src="/images/logov2-64x.png">
+                </div>
+                <a class="toc item"><i class="sidebar icon"></i></a><a  href="/"  class="{% if page.url == '/index.html' %}active{% endif %} item">Home</a><a href="/docs/"  class="{% if page.url contains '/docs/' %}active{% endif %} item">Docs</a><a  href="/blog.html"  class="{% if page.url contains '/blog.html' %}active{% endif %} item">Blog</a><a href="/community.html"  class="{% if page.url contains '/community.html' %}active{% endif %} item">Community</a>
+            </div>
         </div>
       </div>
     </div>
