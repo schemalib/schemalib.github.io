@@ -3,11 +3,13 @@
 <head>
   <title>Luminous Bees</title>
 
-{% include meta.html %}
-{% include css/semantic.html %}
+  {% include meta.html %}
+  {% include css/semantic.html %}
+  {% include css/prism.html %}
 
-{% include js/jquery.html %}
-{% include js/semantic.html %}
+  {% include js/jquery.html %}
+  {% include js/semantic.html %}
+  {% include js/prism.html %}
 
 </head>
 <body>
@@ -40,7 +42,7 @@
     </div>
 
     <div class="ui vertical stripe segment">
-      <div class="ui middle aligned stackable divided grid container">
+      <div class="ui middle aligned stackable grid container">
         <div class="row">
           <div class="twelve wide column">
               <!-- START content -->
@@ -48,7 +50,7 @@
               <!-- END content -->
           </div>
           <div class="four wide column">
-          <div class="ui compact vertical segment">
+          <div class="ui segment container">
             <h4 class="ui header">Docs Menu</h4>
             <div class="ui vertical following fluid accordion text menu">
                 <div class="item">
@@ -57,8 +59,8 @@
                         <b>Guide</b>
                     </a>
                     <div class="content menu">
-                        <a class="item" href="#menu">Menu</a>
-                        <a class="item" href="#secondary-menu">Secondary Menu</a>
+                        <a class="item" href="/docs/">Introduction</a>
+                        <a class="item" href="/docs/getting-started.html">Getting Started</a>
                     </div>
                 </div>
                 <div class="item">
@@ -67,7 +69,7 @@
                         <b>Schema Language</b>
                     </a>
                     <div class="content menu">
-                        <a class="item" href="#header">Header</a>
+                        <a class="item" href="/docs/schema/">Introduction</a>
                     </div>
                 </div>
                 <div class="item">
@@ -76,7 +78,7 @@
                         <b>CLI</b>
                     </a>
                     <div class="content menu">
-                        <a class="item" href="#header">Header</a>
+                        <a class="item" href="/docs/cli/">Introduction</a>
                     </div>
                 </div>
                 <div class="item">
@@ -85,7 +87,7 @@
                         <b>Library</b>
                     </a>
                     <div class="content menu">
-                        <a class="item" href="#header">Header</a>
+                        <a class="item" href="/docs/library/">Introduction</a>
                     </div>
                 </div>
             </div>
