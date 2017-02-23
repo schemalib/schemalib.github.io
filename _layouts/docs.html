@@ -6,6 +6,7 @@
   {% include meta.html %}
   {% include css/semantic.html %}
   {% include css/prism.html %}
+  {% include css/custom.html %}
 
   {% include js/jquery.html %}
   {% include js/semantic.html %}
@@ -44,7 +45,7 @@
     <div class="ui vertical stripe segment">
       <div class="ui middle aligned stackable grid container">
         <div class="row">
-          <div class="twelve wide column">
+          <div id="docs" class="twelve wide column">
               <!-- START content -->
               {{ content }}
               <!-- END content -->
@@ -54,40 +55,40 @@
             <h4 class="ui header">Docs Menu</h4>
             <div class="ui vertical following fluid accordion text menu">
                 <div class="item">
-                    <a class="title">
+                    <a class="{% if page.url contains '/guide/' %} active {% endif %}title">
                         <i class="dropdown icon"></i>
                         <b>Guide</b>
                     </a>
-                    <div class="content menu">
-                        <a class="item" href="/docs/">Introduction</a>
-                        <a class="item" href="/docs/getting-started.html">Getting Started</a>
+                    <div class="content menu{% if page.url contains '/guide/' %} active {% endif %}">
+                        <a class="item{% if page.url contains '/guide/index.html' %} active{% endif %}" href="/docs/guide/index.html">Introduction</a>
+                        <a class="item{% if page.url contains '/guide/getting-started.html' %} active{% endif %}" href="/docs/guide/getting-started.html">Getting Started</a>
                     </div>
                 </div>
                 <div class="item">
-                    <a class="title">
+                    <a class="{% if page.url contains '/schema/' %} active {% endif %}title">
                         <i class="dropdown icon"></i>
                         <b>Schema Language</b>
                     </a>
-                    <div class="content menu">
-                        <a class="item" href="/docs/schema/">Introduction</a>
+                    <div class="content menu{% if page.url contains '/schema/' %} active {% endif %}">
+                        <a class="item{% if page.url contains '/schema/index.html' %} active{% endif %}" href="/docs/schema/index.html">Introduction</a>
                     </div>
                 </div>
                 <div class="item">
-                    <a class="title">
+                    <a class="{% if page.url contains '/cli/' %} active {% endif %}title">
                         <i class="dropdown icon"></i>
                         <b>CLI</b>
                     </a>
-                    <div class="content menu">
-                        <a class="item" href="/docs/cli/">Introduction</a>
+                    <div class="content menu{% if page.url contains '/cli/' %} active {% endif %}">
+                        <a class="item{% if page.url contains '/cli/index.html' %} active{% endif %}" href="/docs/cli/index.html">Introduction</a>
                     </div>
                 </div>
                 <div class="item">
-                    <a class="title">
+                    <a class="{% if page.url contains '/library/' %} active {% endif %}title">
                         <i class="dropdown icon"></i>
                         <b>Library</b>
                     </a>
-                    <div class="content menu">
-                        <a class="item" href="/docs/library/">Introduction</a>
+                    <div class="content menu{% if page.url contains '/library/' %} active {% endif %}">
+                        <a class="item{% if page.url contains '/library/index.html' %} active{% endif %}" href="/docs/library/index.html">Introduction</a>
                     </div>
                 </div>
             </div>

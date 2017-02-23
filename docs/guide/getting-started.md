@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Schema Guide - Getting Started
-permalink: docs/getting-started.html
+permalink: docs/guide/getting-started.html
 ---
 
 Schema Guide : Getting Started
